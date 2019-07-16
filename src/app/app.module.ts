@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { DbService } from './db.service';
+import { MongoDbService } from './mongo-db.service';
 
 
 @NgModule({
@@ -12,9 +15,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DbService,
+              MongoDbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
