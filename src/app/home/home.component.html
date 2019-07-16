@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<h2>Lista de Contatos</h2>
+<form [formGroup]="contato">
+<label for="">Nome</label><br>
+<input type="text" formControlName="nome"><br>
+<label for="">Telefone</label><br>
+<input type="text" formControlName="telefone"><br>
+<label for="">E-mail</label><br>
+<input type="text" formControlName="email"><br>
+<button (click)="salvarContato()">Salvar</button>
+</form>
